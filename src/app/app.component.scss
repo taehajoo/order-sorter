@@ -1,0 +1,128 @@
+//colors
+$primary-green: #0CE8BD;
+$secondary-green: #0DFF8C;
+$primary-blue: #0C9CE8;
+$secondary-blue: #00EAFF;
+
+$white: #fff;
+$off-white: #fafafa;
+
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    background: radial-gradient(circle at 75% 1%, #B9F9FF, #ADCDFF);
+    height: 100%;
+    background-attachment: fixed;
+    font-size: 14px;
+    color: $primary-blue;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-input {
+    border-radius: 0 5px 5px 0;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    padding: 10px;
+    border: 1px solid $secondary-blue;
+    border-left: none;
+    background-color: $off-white;  
+    transition: 0.2s ease-out all;
+    width: 100%;
+    &:hover{
+        border: 1px solid $secondary-green;
+    }
+    
+}
+
+select{
+    width: 10rem;
+    border-radius: 5px 0 0 5px;
+
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    padding: 10px;
+    border: 1px solid $secondary-blue;
+    background-color: $off-white;
+    background-image:
+        //left and right side of carat icon
+        linear-gradient(45deg, transparent 50%, $primary-green 50%),
+        linear-gradient(135deg, $primary-green 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+    transition: 0.2s ease-out all;
+    &:hover{
+        border: 1px solid $secondary-green;
+    }
+}
+
+.search-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    .row{
+        display: flex;
+    }
+}
+
+.loading-wrapper{
+    width:100%;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-wrapper{
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.15);
+    overflow:hidden;
+
+    .order-row{
+        border-bottom: 1px solid $off-white;
+        display: flex;
+        &:first-of-type{
+            padding: 10px;
+            background-color: $off-white;
+        }
+        &:last-of-type{
+            border-bottom: none;
+        }
+
+        .order-col{
+            padding: 20px;
+            flex: 1;
+            &.centered-text{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
